@@ -1,0 +1,35 @@
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.details-box {
+  padding: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: #d6336c;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: 0.4s;
+  margin: 1.5rem;
+}
+
+span,
+h2,
+h3 {
+  color: #495057;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 2rem;
+}
