@@ -4,8 +4,6 @@ import TodosItem from "../components/TodosItem/TodosItem";
 const TodosDetail = () => {
   const { state } = useLocation();
 
-  console.log(state);
-
   return <TodosItem todo={state} />;
 };
 

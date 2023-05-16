@@ -1,9 +1,10 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { todosReducer } from "./todos/todos-slice";
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
+
+import { todosApi } from "../services/todosApi";
 
 export const store = configureStore({
   reducer: {
-    todos: todosReducer,
+    [todosApi.reducerPath]: todosApi.reducer,
   },
 });
 

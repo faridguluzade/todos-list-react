@@ -4,7 +4,6 @@ function Error({ children }: any) {
   return (
     <Box
       sx={{
-        color: "#e03131",
         position: "absolute",
         left: "50%",
         top: "50%",

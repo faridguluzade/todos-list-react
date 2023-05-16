@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import { styled } from "@mui/system";
 import { Link } from "react-router-dom";
 
 export const TodosContainer = styled("div")({
@@ -14,8 +14,8 @@ export const TodosContainer = styled("div")({
     "rgba(17, 17, 26, 0.1) 0px 8px 24px,\n    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px",
 });
 
-export const Title = styled("h2")({
-  color: "#5f3dc4",
+export const Title = styled("h2")(({ theme }) => ({
+  color: theme.palette.primary.dark,
   fontSize: "3rem",
   textAlign: "center",
   marginBottom: "3rem",
@@ -23,7 +23,7 @@ export const Title = styled("h2")({
   "&:hover": {
     transform: "scale(1.08)",
   },
-});
+}));
 
 export const List = styled("ul")({
   "display": "flex",
@@ -40,27 +40,27 @@ export const ItemBox = styled("div")({
   "justifyContent": "space-between",
 });
 
-export const Item = styled("li")({
+export const Item = styled("li")(({ theme }: any) => ({
   "color": "#495057",
   "fontSize": "1.7rem",
   "paddingBottom": "15px",
-  "fontWeight": "600",
-});
+  "fontWeight": theme.typography.fontWeightMedium,
+}));
 
-export const DetailsButton = styled(Link)({
+export const DetailsButton = styled(Link)(({ theme }: any) => ({
   "display": "inline-block",
   "textDecoration": "none",
   "fontSize": "1.2rem",
   "textTransform": "uppercase",
-  "fontWeight": "700",
-  "backgroundColor": "#5f3dc4",
+  "fontWeight": theme.typography.fontWeightBold,
+  "backgroundColor": theme.palette.primary.dark,
   "color": "#fff",
   "padding": "10px 20px",
   "borderRadius": "100px",
   "transition": "0.3s",
 
   "&:hover": {
-    backgroundColor: "#6741d9",
+    backgroundColor: theme.palette.primary.main,
     transform: "rotate(-8deg) scale(1.1)",
   },
-});
+}));

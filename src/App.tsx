@@ -1,17 +1,28 @@
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { deepPurple, pink } from "@mui/material/colors";
+
 import Root from "./routes/router";
 
-import { fetchTodosData } from "./store/todos/todos-action";
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
+export const theme = createTheme({
+  palette: {
+    primary: deepPurple,
+    secondary: pink,
+  },
+  typography: {
+    fontFamily: "Quicksand",
+    fontWeightLight: 400,
+    fontWeightRegular: 500,
+    fontWeightMedium: 600,
+    fontWeightBold: 700,
+  },
+});
 
 const App = () => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    fetchTodosData()(dispatch);
-  }, []);
-
-  return <Root />;
+  return (
+    <ThemeProvider theme={theme}>
+      <Root />
+    </ThemeProvider>
+  );
 };
 
 export default App;

@@ -1,6 +1,3 @@
-import { todosState } from "../../store/todos/todos-slice";
-
-import styles from "./TodosList.module.css";
 import {
   TodosContainer,
   Title,
@@ -13,23 +10,19 @@ import {
 import Loading from "../UI/Loading";
 import Error from "../UI/Error";
 
-interface Values {
-  value: todosState;
-}
-
-const TodosList: React.FC<Values> = ({ value }) => {
-  const { todos, httpError, isLoading } = value;
+const TodosList = ({ value }: any) => {
+  const { data, isError, isLoading } = value;
 
   return (
     <TodosContainer>
       {isLoading && <Loading />}
-      {httpError && <Error>{httpError}</Error>}
+      {isError && <Error>{"Could not fetch data! 🔥"}</Error>}
 
-      {!httpError && !isLoading && (
+      {!isError && !isLoading && (
         <>
           <Title>All Todos List</Title>
           <List>
-            {todos.map((item: any, index) => (
+            {data.map((item: any, index: number) => (
               <ItemBox key={item.id}>
                 <Item>
                   {index + 1}. {item.title}

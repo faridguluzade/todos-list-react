@@ -1,10 +1,11 @@
-import { useSelector } from "react-redux";
+import { useGetAllTodosQuery } from "../services/todosApi";
 
 import TodosList from "../components/TodosList/TodosList";
-import { selectTodos } from "../store/todos/todos-slice";
 
 const Todos = () => {
-  const value = useSelector(selectTodos);
+  const { data, isError, isLoading } = useGetAllTodosQuery("todos");
+
+  const value: any = { data, isError, isLoading };
 
   return <TodosList value={value} />;
 };
