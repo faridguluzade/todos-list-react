@@ -8,7 +8,7 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchTodosData());
+    fetchTodosData()(dispatch);
   }, []);
 
   return <Root />;

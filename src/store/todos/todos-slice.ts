@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from "../store";
 
-interface todosState {
+export interface todosState {
   todos: any[];
   httpError: string;
   isLoading: boolean;

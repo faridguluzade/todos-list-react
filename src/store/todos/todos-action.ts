@@ -1,12 +1,14 @@
 import { setTodos, setIsLoading, setHttpError } from "./todos-slice";
 import { AppDispatch } from "../store";
 
-export const fetchTodosData = (): any => {
+export const fetchTodosData = (): ((
+  dispatch: AppDispatch
+) => Promise<void>) => {
   return async (dispatch: AppDispatch) => {
     try {
       const res = await fetch("https://jsonplaceholder.typicode.com/todos");
 
-      if (!res.ok) throw new Error("🤢 Could not fetch data!");
+      if (!res.ok) throw new Error("Could not fetch data! 🔥");
 
       const data = await res.json();
 
