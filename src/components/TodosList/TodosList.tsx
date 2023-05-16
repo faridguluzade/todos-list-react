@@ -27,9 +27,7 @@ const TodosList = ({ value }: any) => {
                 <Item>
                   {index + 1}. {item.title}
                 </Item>
-                <DetailsButton to={`${item.id}`} state={item}>
-                  Details
-                </DetailsButton>
+                <DetailsButton to={`${item.id}`}>Details</DetailsButton>
               </ItemBox>
             ))}
           </List>
