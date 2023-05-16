@@ -3,7 +3,7 @@ import { deepPurple, pink } from "@mui/material/colors";
 
 import Root from "./routes/router";
 
-export const theme = createTheme({
+const theme = createTheme({
   palette: {
     primary: deepPurple,
     secondary: pink,

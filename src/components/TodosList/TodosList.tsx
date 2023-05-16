@@ -11,14 +11,14 @@ import Loading from "../UI/Loading";
 import Error from "../UI/Error";
 
 const TodosList = ({ value }: any) => {
-  const { data, isError, isLoading } = value;
+  const { data, isError, isFetching } = value;
 
   return (
     <TodosContainer>
-      {isLoading && <Loading />}
+      {isFetching && <Loading />}
       {isError && <Error>{"Could not fetch data! 🔥"}</Error>}
 
-      {!isError && !isLoading && (
+      {!isError && !isFetching && (
         <>
           <Title>All Todos List</Title>
           <List>

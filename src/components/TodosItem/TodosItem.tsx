@@ -1,12 +1,6 @@
 import { TodoItemContainer, ButtonBack, DetailsBox } from "./TodosItem.styles";
 import { Text } from "./TodosItem.styles";
 
-interface Item {
-  id: number;
-  title: string;
-  completed: boolean;
-}
-
 const TodosItem = ({ todo }: any) => {
   const { id, title, completed } = todo;
 
