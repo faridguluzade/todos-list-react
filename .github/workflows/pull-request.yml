@@ -1,7 +1,7 @@
 name: Pre test and build
 
 on:
-  pull_request:
+  push:
     branches: [main]
 
 concurrency:
