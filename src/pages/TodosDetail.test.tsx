@@ -3,6 +3,8 @@ import '@testing-library/jest-dom';
 import * as queries from '../store/api/todosApi';
 import TodosDetail from './TodosDetail';
 import { BrowserRouter as Router } from 'react-router-dom';
+
+
 describe('TodosDetail component', () => {
 	test('should render loading element', () => {
 		jest.spyOn(queries, 'useGetTodoItemQuery').mockImplementation((): any => ({

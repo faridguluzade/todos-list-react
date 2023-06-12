@@ -2,6 +2,7 @@ import { styled } from '@mui/system';
 
 import { Link } from 'react-router-dom';
 import { Typography } from '@mui/material';
+import { theme as mainTheme } from '../../App';
 
 export const TodoItemContainer = styled('div')({
 	backgroundColor: '#fff',
@@ -36,7 +37,7 @@ export const DetailsBox = styled('div')({
 });
 
 export const Text = styled(Typography)(({ theme }: any) => ({
-	fontFamily: theme.typography.inherit.fontFamily,
+	fontFamily: theme.typography.fontFamily,
 	color: '#495057',
 	borderBottom: '1px solid #dee2e6',
 	paddingBottom: '2rem',

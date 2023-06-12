@@ -1,3 +1,4 @@
+import { Theme } from '@mui/material';
 import { styled } from '@mui/system';
 import { Link } from 'react-router-dom';
 
@@ -14,8 +15,8 @@ export const TodosContainer = styled('div')({
 		'rgba(17, 17, 26, 0.1) 0px 8px 24px,\n    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px',
 });
 
-export const Title = styled('h2')(({ theme }) => ({
-	// color: theme.palette.primary.dark,
+export const Title = styled('h2')(({ theme }: any) => ({
+	color: theme.palette.primary.dark,
 	fontSize: '3rem',
 	textAlign: 'center',
 	marginBottom: '3rem',
